@@ -12,6 +12,11 @@ public abstract class Employee {
         this.salary = salary;
     }
 
+    public void setName(String name) {
+        if(name.length() > 0){
+        this.name = name;}
+    }
+
     public String getName() {
         return name;
     }
