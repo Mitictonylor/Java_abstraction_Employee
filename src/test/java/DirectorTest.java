@@ -3,7 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+
 
 public class DirectorTest {
 
@@ -29,6 +29,10 @@ public class DirectorTest {
     @Test
     public void canGetDeptName() {
         assertEquals("production", director.getDeptName());
+    }
+    @Test
+    public void canGetBudget() {
+        assertEquals(20000.00, director.getBudget(),0.01);
     }
 
     @Test
