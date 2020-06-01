@@ -11,12 +11,12 @@ public class DatabaseAdminTest {
 
     @Before
     public void setUp() {
-        databaseAdmin = new DatabaseAdmin("Fra", "zzz123", 100000.00 );
+        databaseAdmin = new DatabaseAdmin("Fra", "zzz123", 100000.00);
     }
 
     @Test
     public void canGetName() {
-        assertEquals("Fra", databaseAdmin.getName() );
+        assertEquals("Fra", databaseAdmin.getName());
     }
 
     @Test
@@ -39,16 +39,19 @@ public class DatabaseAdminTest {
         databaseAdmin.raiseSalary(databaseAdmin.payBonus());
         assertEquals(101000.00, databaseAdmin.getSalary(), 0.01);
     }
+
     @Test
     public void canNotRaiseTheSalaryWithANegativeValue() {
         databaseAdmin.raiseSalary(-1000.00);
         assertEquals(100000.00, databaseAdmin.getSalary(), 0.01);
     }
+
     @Test
     public void canNotSetANullName() {
         databaseAdmin.setName("");
         assertEquals("Fra", databaseAdmin.getName());
     }
+
     @Test
     public void canSetAName() {
         databaseAdmin.setName("Antonio");

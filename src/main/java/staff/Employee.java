@@ -12,13 +12,14 @@ public abstract class Employee {
         this.salary = salary;
     }
 
-    public void setName(String name) {
-        if(name.length() > 0){
-        this.name = name;}
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        if (name.length() > 0) {
+            this.name = name;
+        }
     }
 
     public String getNIN() {
@@ -34,12 +35,13 @@ public abstract class Employee {
     }
 
     public void raiseSalary(double raiseAmount) {
-        if (raiseAmount > 0.00){
-        this.setSalary(( this.getSalary() + raiseAmount));}
+        if (raiseAmount > 0.00) {
+            this.setSalary((this.getSalary() + raiseAmount));
+        }
     }
 
-    public double payBonus(){
-        return ((this.getSalary() *1)/100);
+    public double payBonus() {
+        return ((this.getSalary() * 1) / 100);
     }
 
 }

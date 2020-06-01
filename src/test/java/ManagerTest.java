@@ -10,22 +10,25 @@ public class ManagerTest {
     Manager manager;
 
     @Before
-    public void setUp(){
-        manager = new Manager("Francesco", "abc123", 90000.00,"production" );
+    public void setUp() {
+        manager = new Manager("Francesco", "abc123", 90000.00, "production");
     }
 
     @Test
     public void canGetName() {
         assertEquals("Francesco", manager.getName());
     }
+
     @Test
     public void canGetNIN() {
         assertEquals("abc123", manager.getNIN());
     }
+
     @Test
     public void canGetSalary() {
-        assertEquals(90000.00, manager.getSalary(),0.01);
+        assertEquals(90000.00, manager.getSalary(), 0.01);
     }
+
     @Test
     public void canGetDeptName() {
         assertEquals("production", manager.getDeptName());
@@ -41,6 +44,7 @@ public class ManagerTest {
         manager.raiseSalary(manager.payBonus());
         assertEquals(90900.00, manager.getSalary(), 0.01);
     }
+
     @Test
     public void canNotRaiseTheSalaryWithANegativeValue() {
         manager.raiseSalary(-1000.00);
@@ -52,6 +56,7 @@ public class ManagerTest {
         manager.setName("");
         assertEquals("Francesco", manager.getName());
     }
+
     @Test
     public void canSetAName() {
         manager.setName("Antonio");
