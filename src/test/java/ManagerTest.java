@@ -1,8 +1,6 @@
-import Staff.management.Manager;
+import staff.management.Manager;
 import org.junit.Before;
 import org.junit.Test;
-
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
