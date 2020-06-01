@@ -46,4 +46,15 @@ public class ManagerTest {
         manager.raiseSalary(-1000.00);
         assertEquals(90000.00, manager.getSalary(), 0.01);
     }
+
+    @Test
+    public void canNotSetANullName() {
+        manager.setName("");
+        assertEquals("Francesco", manager.getName());
+    }
+    @Test
+    public void canSetAName() {
+        manager.setName("Antonio");
+        assertEquals("Antonio", manager.getName());
+    }
 }
