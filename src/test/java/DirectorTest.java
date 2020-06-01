@@ -50,4 +50,14 @@ public class DirectorTest {
         director.raiseSalary(-1000.00);
         assertEquals(90000.00, director.getSalary(), 0.01);
     }
+    @Test
+    public void canNotSetANullName() {
+        director.setName("");
+        assertEquals("Francesco", director.getName());
+    }
+    @Test
+    public void canSetAName() {
+        director.setName("Antonio");
+        assertEquals("Antonio", director.getName());
+    }
 }
