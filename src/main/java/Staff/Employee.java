@@ -23,4 +23,12 @@ public abstract class Employee {
     public double getSalary() {
         return salary;
     }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void raiseSalary(double raiseAmount) {
+        this.setSalary(( this.getSalary() + raiseAmount));
+    }
 }
