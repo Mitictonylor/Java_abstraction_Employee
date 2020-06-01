@@ -3,6 +3,7 @@ import org.junit.Test;
 import staff.techStaff.Developer;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class DeveloperTest {
 
@@ -14,7 +15,13 @@ public class DeveloperTest {
     }
 
     @Test
-    public void getName() {
+    public void canGetName() {
         assertEquals("Fra", developer.getName() );
     }
+
+    @Test
+    public void canGetNIN() {
+        assertEquals("zzz123", developer.getNIN());
+    }
+
 }
